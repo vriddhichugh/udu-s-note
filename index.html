@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Udu 💌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-frame">
+      <header class="topbar">
+        <button id="prevBtn" class="small-btn" aria-label="Go to previous screen">← Back</button>
+        <div class="progress-wrap" aria-live="polite">
+          <div id="progressText" class="progress-text">1 / 6</div>
+          <div class="progress-track"><span id="progressFill"></span></div>
+          <div id="progressDots" class="progress-dots"></div>
+        </div>
+        <button id="musicBtn" class="small-btn" aria-label="Toggle background music">▶ Music</button>
+      </header>
+
+      <main id="screens" class="screens" aria-live="polite">
+        <section class="screen active" data-screen="0">
+          <div class="card intro-card">
+            <p class="kicker" id="s1Kicker"></p>
+            <h1 id="s1Title"></h1>
+            <p id="s1Sub"></p>
+            <button class="next-btn" data-next="1" id="s1Btn"></button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="1">
+          <div class="card">
+            <h2 id="s2Title"></h2>
+            <div class="ticket" aria-label="Ticket illustration">
+              <p class="ticket-label" id="s2Ticket"></p>
+            </div>
+            <p id="s2Body"></p>
+            <button class="next-btn" data-next="2" id="s2Btn"></button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="2">
+          <div class="card soft-card">
+            <h2 id="s3Title"></h2>
+            <p id="s3Body"></p>
+            <button id="hugBtn" class="small-btn accent">Send a tiny hug 💗</button>
+            <button class="next-btn" data-next="3" id="s3Btn"></button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="3">
+          <div class="card">
+            <h2 id="s4Title"></h2>
+            <p class="helper">Tap each card to flip and add your own memories.</p>
+            <div id="flipCards" class="flip-grid"></div>
+            <div class="film-strip" id="photoStrip"></div>
+            <button class="next-btn" data-next="4" id="s4Btn"></button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="4">
+          <div class="card">
+            <h2 id="s5Title"></h2>
+            <p class="helper">Click the envelope when you're ready.</p>
+            <button id="envelope" class="envelope" aria-label="Open letter envelope">
+              <span class="flap"></span>
+              <span class="letter" id="letterText"></span>
+            </button>
+            <button class="next-btn hidden" data-next="5" id="s5Btn"></button>
+          </div>
+        </section>
+
+        <section class="screen" data-screen="5">
+          <div class="card ending-card">
+            <h2 id="s6Line1"></h2>
+            <p id="s6Line2"></p>
+            <p id="s6Sign" class="signature"></p>
+            <button id="bonusBtn" class="small-btn accent">P.S. tap for bonus note ✨</button>
+            <p id="bonusMessage" class="bonus hidden"></p>
+          </div>
+        </section>
+      </main>
+
+      <div id="heartLayer" class="heart-layer" aria-hidden="true"></div>
+      <audio id="bgMusic" preload="none" loop>
+        <source src="assets/udu-theme.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
