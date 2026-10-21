@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Udu ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-wrap">
+      <header class="top-bar">
+        <button id="backButton" class="ghost-button" type="button" aria-label="Go to previous screen">
+          ← Back
+        </button>
+        <div class="progress-wrap" aria-label="Progress">
+          <div id="progressText" class="progress-text">1 / 6</div>
+          <div class="progress-track" role="progressbar" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1">
+            <div id="progressBar" class="progress-fill"></div>
+          </div>
+        </div>
+        <button id="musicButton" class="ghost-button" type="button" aria-pressed="false">♫ Play music</button>
+      </header>
+
+      <main id="screens" class="screens" aria-live="polite">
+        <section class="screen active" data-screen="1">
+          <p class="eyebrow">A message for Udu</p>
+          <h1 id="screen1Title"></h1>
+          <p id="screen1Body"></p>
+          <button class="primary-button next-button" type="button">Fine, show me.</button>
+        </section>
+
+        <section class="screen" data-screen="2">
+          <p class="eyebrow">The incident</p>
+          <h2 id="screen2Title"></h2>
+          <article class="ticket-card" aria-label="Ticket illustration">
+            <p id="screen2Ticket"></p>
+          </article>
+          <p id="screen2Body"></p>
+          <button class="primary-button next-button" type="button">Okay, but seriously…</button>
+        </section>
+
+        <section class="screen soft" data-screen="3">
+          <p class="eyebrow">The real part</p>
+          <p id="screen3Body" class="long-note"></p>
+          <button class="primary-button next-button" type="button">Turn the page</button>
+        </section>
+
+        <section class="screen" data-screen="4">
+          <p class="eyebrow">The Udu appreciation page</p>
+          <div class="flip-grid">
+            <button class="flip-card" type="button">
+              <span class="flip-inner">
+                <span class="flip-front">Things I love about you</span>
+                <span class="flip-back">
+                  <strong>Editable:</strong>
+                  Add your list here.<br />
+                  Example placeholders:<br />
+                  • [inside joke #1]<br />
+                  • [quality you adore]<br />
+                  • [something only Udu does]
+                </span>
+              </span>
+            </button>
+            <button class="flip-card" type="button">
+              <span class="flip-inner">
+                <span class="flip-front">My favourite memories with you</span>
+                <span class="flip-back">
+                  <strong>Editable:</strong>
+                  Add your real memories here.<br />
+                  • [memory #1]<br />
+                  • [memory #2]<br />
+                  • [memory #3]
+                </span>
+              </span>
+            </button>
+            <button class="flip-card" type="button">
+              <span class="flip-inner">
+                <span class="flip-front">Things that remind me of us</span>
+                <span class="flip-back">
+                  <strong>Editable:</strong>
+                  Add your references here.<br />
+                  • [song / snack / place]
+                  <div class="photo-strip">
+                    <div class="photo-placeholder">Replace with Photo 1</div>
+                    <div class="photo-placeholder">Replace with Photo 2</div>
+                    <div class="photo-placeholder">Replace with Photo 3</div>
+                  </div>
+                </span>
+              </span>
+            </button>
+          </div>
+          <p class="hint">Tap cards to flip 💌</p>
+          <button class="primary-button next-button" type="button">Open the envelope</button>
+        </section>
+
+        <section class="screen" data-screen="5">
+          <p class="eyebrow">Open when you're ready</p>
+          <div id="envelope" class="envelope" role="button" tabindex="0" aria-label="Open envelope">
+            <div class="envelope-lid"></div>
+            <div class="envelope-body"></div>
+            <div class="letter" id="screen5Letter"></div>
+          </div>
+          <p class="hint">Click the envelope to open it.</p>
+          <button id="afterEnvelope" class="primary-button" type="button" hidden>Last page</button>
+        </section>
+
+        <section class="screen" data-screen="6">
+          <p id="screen6Top" class="ending-top"></p>
+          <p id="screen6Bottom" class="ending-bottom"></p>
+          <p id="screen6Signature" class="signature"></p>
+          <button id="heartBurstButton" class="primary-button" type="button">Send hearts</button>
+          <button id="bonusButton" class="ghost-button" type="button">Psst… bonus</button>
+          <p id="bonusMessage" class="bonus-message" hidden>
+            Bonus confession: I still owe you snacks, dramatic narration, and one properly attended performance date.
+          </p>
+        </section>
+      </main>
+
+      <audio id="bgMusic" loop preload="none">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_0f4ee4576d.mp3?filename=soft-piano-ambient-11792.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
